@@ -62,16 +62,16 @@ questions:
     description: "Grafana image tag"
     type: string
     label: Grafana Image Tag
-  #- variable: grafana.grafanaWatcher.image.repository
-  #  default: "grafana/grafana-watcher"
-  #  description: "Grafana Watcher image name"
-  #  type: string
-  #  label: Grafana Watcher Image Name
-  #- variable: grafana.grafanaWatcher.image.tag
-  #  default: "v0.2.0"
-  #  description: "Grafana Watcher image tag"
-  #  type: string
-  #  label: Grafana Watcher Image Tag
+  - variable: grafana.grafanaWatcher.image.repository
+    default: "grafana/grafana-watcher"
+    description: "Grafana Watcher image name"
+    type: string
+    label: Grafana Watcher Image Name
+  - variable: grafana.grafanaWatcher.image.tag
+    default: "v0.2.0"
+    description: "Grafana Watcher image tag"
+    type: string
+    label: Grafana Watcher Image Tag
 # server configurations
 - variable: server.ingress.enabled
   default: true
