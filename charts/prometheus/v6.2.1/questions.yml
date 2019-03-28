@@ -16,7 +16,7 @@ questions:
     type: string
     label: Prometheus Image Name
   - variable: server.image.tag
-    default: "v2.2.1"
+    default: "v3"
     description: "Prometheus image tag"
     type: string
     label: Prometheus Image Tag
@@ -27,38 +27,28 @@ questions:
     label: Alertmanager Image Name
     show_if: "alertmanager.enabled=true"
   - variable: alertmanager.image.tag
-    default: "v0.14.0"
+    default: "v0.16.1"
     description: "Alertmanager image tag"
     type: string
     label: Alertmanager Image Tag
     show_if: "alertmanager.enabled=true"
   - variable: nodeExporter.image.repository
-    default: "prom/node-exporter"
+    default: "prom-node_exporter"
     description: "Node exporter image name"
     type: string
     label: NodeExporter Image Name
   - variable: nodeExporter.image.tag
-    default: "v0.15.2"
+    default: "v1"
     description: "Node exporter image tag"
     type: string
     label: NodeExporter Image Tag
-  - variable: pushgateway.image.repository
-    default: "prom/pushgateway"
-    description: "Pushgateway image name"
-    type: string
-    label: Pushgateway Image Name
-  - variable: pushgateway.image.tag
-    default: "v0.4.0"
-    description: "Pushgateway image tag"
-    type: string
-    label: Pushgateway Image Tag
   - variable: kubeStateMetrics.image.repository
-    default: "quay.io/coreos/kube-state-metrics"
+    default: "prom/kube-state-metrics"
     description: "Kube-state-metrics image name"
     type: string
     label: KubeStateMetrics Image Name
   - variable: kubeStateMetrics.image.tag
-    default: "v1.3.1"
+    default: "latest"
     description: "Kube-state-metrics image tag"
     type: string
     label: KubeStateMetrics Image Tag
@@ -68,20 +58,20 @@ questions:
     type: string
     label: Grafana Image Name
   - variable: grafana.image.tag
-    default: "5.0.0"
+    default: "v6.0.2"
     description: "Grafana image tag"
     type: string
     label: Grafana Image Tag
-  - variable: grafana.grafanaWatcher.image.repository
-    default: "quay.io/coreos/grafana-watcher"
-    description: "Grafana Watcher image name"
-    type: string
-    label: Grafana Watcher Image Name
-  - variable: grafana.grafanaWatcher.image.tag
-    default: "v0.0.8"
-    description: "Grafana Watcher image tag"
-    type: string
-    label: Grafana Watcher Image Tag
+  #- variable: grafana.grafanaWatcher.image.repository
+  #  default: "grafana/grafana-watcher"
+  #  description: "Grafana Watcher image name"
+  #  type: string
+  #  label: Grafana Watcher Image Name
+  #- variable: grafana.grafanaWatcher.image.tag
+  #  default: "v0.2.0"
+  #  description: "Grafana Watcher image tag"
+  #  type: string
+  #  label: Grafana Watcher Image Tag
 # server configurations
 - variable: server.ingress.enabled
   default: true
