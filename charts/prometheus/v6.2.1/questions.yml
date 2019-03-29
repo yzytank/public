@@ -145,7 +145,7 @@ questions:
     label: Grafana Admin Username
     required: true
   - variable: grafana.adminPassword
-    default: ""
+    default: "admin"
     description: "Grafana admin password"
     type: password
     group: "Grafana Settings"
